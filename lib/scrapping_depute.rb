@@ -3,12 +3,6 @@ require 'nokogiri'
 require 'open-uri'
 
 
-# page = Nokogiri::HTML(open("http://www2.assemblee-nationale.fr/deputes/liste/tableau"))
-# puts  page.search("td a")[0]["href"]
-# /html/body/div[3]/div/div/section/div/article/div[3]/div/div/table/tbody/tr[1]/td[1]/a
-# /html/body/div[3]/div/div/section/div/article/div[3]/div/div/table/tbody/tr[7]/td[1]/a
-
-
 
 def get_depute_urls(url= "http://www2.assemblee-nationale.fr/deputes/liste/tableau")
   depute_url_array = Array[]
