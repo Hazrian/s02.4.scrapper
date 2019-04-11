@@ -23,9 +23,17 @@ def get_townhall_email(townhall_url)
 end
 
 def get_townhall_email_array
-  puts final_mails_townhall = get_townhall_urls.map{ |key, value| get_townhall_urls[key] = get_townhall_email("https://annuaire-des-mairies.com#{value}")}
+  j=0
+  final_mails_townhall = {}
+  get_townhall_urls.each do |key, value|
+	puts final_mails_townhall[key] = get_townhall_email("https://annuaire-des-mairies.com#{value}")
+	puts j+=1
+  end
+
+
+  puts final_mails_townhall
   puts final_mails_townhall.class
   return final_mails_townhall
 end
 
-get_townhall_email_array
+#get_townhall_email_array
